@@ -84,6 +84,15 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails'
   # gem 'byebug'
+
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
+
+
+
 end
 
 group :test do
@@ -99,3 +108,5 @@ group :test do
   # but test-unit has been removed from ruby core since 2.2.0
   gem 'test-unit'
 end
+
+gem 'puma'

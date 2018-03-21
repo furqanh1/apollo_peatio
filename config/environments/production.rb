@@ -53,9 +53,10 @@ Exchange::Application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :memory_store
-  config.cache_store = :redis_store, ENV['REDIS_URL']
 
-  config.session_store :redis_store, :key => '_exchange_session', :expire_after => ENV['SESSION_EXPIRE'].to_i.minutes
+  config.cache_store = :redis_store, "redis://127.0.0.1:6379"
+
+  config.session_store :redis_store, :key => '_peatio_session', :expire_after => 60.to_i.minutes
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
