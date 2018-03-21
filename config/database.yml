@@ -9,7 +9,7 @@ development: &defaults
 
 test:
   <<: *defaults
-  database: peatio_test
+  database: exchange_test
 
 production:
   adapter: mysql2
