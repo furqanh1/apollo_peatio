@@ -1,0 +1,21 @@
+development: &defaults
+  adapter: mysql2
+  encoding: utf8
+  database: exchange_development
+  username: root
+  password: root
+  pool: 10
+  reconnect: true
+
+test:
+  <<: *defaults
+  database: peatio_test
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: exchange_production
+  username: root
+  password: uGhaizoh7i
+  pool: 10
+  reconnect: true
