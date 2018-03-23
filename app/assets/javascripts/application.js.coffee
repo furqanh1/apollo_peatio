@@ -18,6 +18,9 @@
 #= require qrcode
 #= require cookies.min
 
+#= require welcome
+#= require smoothscroll
+
 #= require ./lib/notifier
 #= require ./lib/pusher_connection
 #= require ./lib/tiny-pubsub

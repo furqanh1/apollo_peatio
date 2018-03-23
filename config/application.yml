@@ -84,4 +84,4 @@ test:
 
 production:
   <<: *defaults
-  URL_HOST: 51.254.147.128
+  URL_HOST: "cryptonote.exchange"
