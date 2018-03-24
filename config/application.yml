@@ -85,3 +85,4 @@ test:
 production:
   <<: *defaults
   URL_HOST: "cryptonote.exchange"
+  URL_SCHEMA: https
