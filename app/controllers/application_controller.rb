@@ -45,9 +45,10 @@ class ApplicationController < ActionController::Base
   end
 
   def auth_verified!
-    unless current_user and current_user.id_document and current_user.id_document_verified?
-      redirect_to settings_path, alert: t('private.settings.index.auth-verified')
-    end
+    return true
+    # unless current_user and current_user.id_document and current_user.id_document_verified?
+    #   redirect_to settings_path, alert: t('private.settings.index.auth-verified')
+    # end
   end
 
   def auth_no_initial!
@@ -66,9 +67,10 @@ class ApplicationController < ActionController::Base
   end
 
   def two_factor_activated!
-    if not current_user.two_factors.activated?
-      redirect_to settings_path, alert: t('two_factors.auth.please_active_two_factor')
-    end
+    return true
+    # if not current_user.two_factors.activated?
+    #   redirect_to settings_path, alert: t('two_factors.auth.please_active_two_factor')
+    # end
   end
 
   def two_factor_auth_verified?
