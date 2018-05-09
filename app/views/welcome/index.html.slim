@@ -1,155 +1,643 @@
-.spn_hol
-  .spinner
-    .bounce1
-    .bounce2
-    .bounce3
-section#HOME.header.parallax.home-parallax.page
-  h2
-  .section_overlay
-    nav.navbar.navbar-default.navbar-fixed-top role="navigation"
-      .container
-        .navbar-header
-          button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-            span.sr-only
-              | Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand href="#"
-            img src='#{image_path 'logo.png'}' alt="Title"
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right
-            li
-              a href="#HOME"
-                | HOME
-            li
-              a href="#HOWTO"
-                | HOW TO
-            li
-              a href="#TRADE"
-                | TRADE
-            - unless current_user
-              li
-                a href="#{signup_path}"
-                  | SIGNUP
-              li
-                a href="#{signin_path}"
-                  | SIGNIN
-            - else
-              li
-                a href="#{funds_path}"
-                  | FUNDS
-              li
-                a href="#{settings_path}"
-                  | SETTINGS
-            li
-              a href="#CONTACT"
-                | ABOUT US
-    .container.home-container
-      .row
-        .col-md-24
-          .logo.text-center
-            img width="602.25" height="202.25" src='#{image_path 'logo.png'}' alt=""
-      .row
-        .col-md-24.col-sm-16
-          .home_text
-            h1
-              | Welcome to Demo Exchange!
-            p
-              | Using the Demo Exchange platform, you can exchange cryptocurrencies to Brazilian Real directly with no central organization involved. Demo Exchange allows members to buy and sell cryptocurrencies directly to and from each other.
-            - unless current_user
-              .signup-btn
-                a.btn.home-btn.wow.fadeInLeft href="#{signup_path}"
-                  | Signup
-                a.tuor.btn.wow.fadeInRight href="#{signin_path}"
-                  | Signin
-            - else
-              .signup-btn
-                a.btn.home-btn.wow.fadeInLeft href="#{funds_path}"
-                  | Funds
-                a.btn.home-btn.wow.fadeInRight href="#{settings_path}"
-                  | Settings
+/ .spn_hol
+/   .spinner
+/     .bounce1
+/     .bounce2
+/     .bounce3
+/ section#HOME.header.parallax.home-parallax.page
+/   h2
+/   .section_overlay
+/     nav.navbar.navbar-default.navbar-fixed-top role="navigation"
+/       .container
+/         .navbar-header
+/           button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+/             span.sr-only
+/               | Toggle navigation
+/             span.icon-bar
+/             span.icon-bar
+/             span.icon-bar
+/           a.navbar-brand href="#"
+/             img src='#{image_path 'logo.png'}' alt="Title"
+/         #bs-example-navbar-collapse-1.collapse.navbar-collapse
+/           ul.nav.navbar-nav.navbar-right
+/             li
+/               a href="#HOME"
+/                 | HOME
+/             li
+/               a href="#HOWTO"
+/                 | HOW TO
+/             li
+/               a href="#TRADE"
+/                 | TRADE
+/             - unless current_user
+/               li
+/                 a href="#{signup_path}"
+/                   | SIGNUP
+/               li
+/                 a href="#{signin_path}"
+/                   | SIGNIN
+/             - else
+/               li
+/                 a href="#{funds_path}"
+/                   | FUNDS
+/               li
+/                 a href="#{settings_path}"
+/                   | SETTINGS
+/             li
+/               a href="#CONTACT"
+/                 | ABOUT US
+/     .container.home-container
+/       .row
+/         .col-md-24
+/           .logo.text-center
+/             img width="602.25" height="202.25" src='#{image_path 'logo.png'}' alt=""
+/       .row
+/         .col-md-24.col-sm-16
+/           .home_text
+/             h1
+/               | Welcome to Demo Exchange!
+/             p
+/               | Using the Demo Exchange platform, you can exchange cryptocurrencies to Brazilian Real directly with no central organization involved. Demo Exchange allows members to buy and sell cryptocurrencies directly to and from each other.
+/             - unless current_user
+/               .signup-btn
+/                 a.btn.home-btn.wow.fadeInLeft href="#{signup_path}"
+/                   | Signup
+/                 a.tuor.btn.wow.fadeInRight href="#{signin_path}"
+/                   | Signin
+/             - else
+/               .signup-btn
+/                 a.btn.home-btn.wow.fadeInLeft href="#{funds_path}"
+/                   | Funds
+/                 a.btn.home-btn.wow.fadeInRight href="#{settings_path}"
+/                   | Settings
 
-section#HOWTO.howto.page
-  .container
-    .row
-      .col-md-20.col-md-offset-2
-        .section_title.wow.fadeIn data-wow-duration="1s"
-          h2
-            | How To Work
+/ section#HOWTO.howto.page
+/   .container
+/     .row
+/       .col-md-20.col-md-offset-2
+/         .section_title.wow.fadeIn data-wow-duration="1s"
+/           h2
+/             | How To Work
+/           p
+/             | You can also profiting from downward movements in coins price by selling them at a higher price and buy them again at a lower price and pocketing the price difference. If you wants to profit from short selling, you have to own Coin or USD in the first place. Buy coins from Demo Exchange with USD first.
+/   .howto_inner
+/     .container
+/       .row
+/         .col-md-8.left_no_padding.wow.fadeInLeft data-wow-duration="1s"
+/           .howto_image
+/             img.wow.bounceIn data-wow-duration="1s" src='#{image_path 'howto.png'}' alt=""
+/         .col-md-14.right_no_padding.wow.fadeInRight data-wow-duration="1s"
+/           .left_single_howto
+/             h3
+/               | Step 1 - Deposit USD and cryptocurrencies first
+/             p
+/               | Signup and activate your account to get your coin deposit address.
+/             p
+/               | Once Coin sent to coin address you will see fully confirmed and available for trade. It can take around 30 minutes or more time depending on Coin network so do not worry and wait quietly.
+/           .left_single_howto
+/             h3
+/               | Step 2 - Buy Coins from Exchange
+/             p
+/               | Once you see balance in your coin wallet visit Coin fund page.
+/             p
+/               | Simply Fill in buy coin form for your desired price and click "Buy Coin" Button.
+/ #TRADE.trades
+/   .container
+/     .row.wow.fadeInLeftBig data-wow-duration="1s"
+/       .col-md-18
+/         p
+/           | Have you never done trade? Try it by pressing this button.
+/       .col-md-6
+/         a.btn.btn-primary.btn-action href="#{market_path(current_market)}" role="button"
+/           | Trade Now
+/ section#CONTACT.contact.page
+/   .container
+/     .row
+/       .col-md-20.col-md-offset-2
+/         .section_title
+/           h2
+/             | about us
+/           p
+/             | The Demo Team with best skills and experiences
+/   .container
+/     .row
+/       .col-md-16.col-md-offset-4
+/         .contact_screen.text-center.wow.fadeInUp data-wow-duration="1s"
+/           img src='#{image_path 'footer.png'}' alt=""
+/ section.copyright
+/   .container
+/     .row
+/       .col-md-6
+/         .copy_right_text
+/           p
+/             a href="https://demo.exchange"
+/               | Terms of Service
+/           p
+/             a href="https://demo.exchange"
+/               | Privacy Policy
+/           p
+/             a href="https://demo.exchange"
+/               | Fee Schedule
+/       .col-md-12
+/         .copy_right_text
+/           p
+/             a href="mailto:support@demo.exchange"
+/               i.fa.fa-envelope
+/               | &nbsp&nbsp&nbsp
+/               | support@demo.exchange
+/           p
+/             a href="#"
+/               i.fa.fa-map-marker
+/               | &nbsp&nbsp&nbsp
+/               | Demo Exchange
+/       .col-md-6
+/         .scroll_top
+/           a href="#HOME"
+/             i.fa.fa-angle-double-up
+
+#preloader
+  #status
+#content-wrapper
+  /!
+    | INTRO
+    | \=============================================
+  section#intro.intro-parallax
+    .container
+      /! Header
+      header#header
+        .row
+          /! Logo Image
+          #logo_image.col-xs-6
+            a href="#intro" 
+              img alt="logo" role="banner" src='#{image_path 'logo1.png'}' /
+          /! Header Social Icons
+          #social_icons.col-xs-6.text-right
+            ul.social-icons.clearfix
+              li
+                a.he_social.ico-facebook href="#" 
+                  i.fa.fa-facebook
+              li
+                a.he_social.ico-twitter href="#" 
+                  i.fa.fa-twitter
+              li
+                a.he_social.ico-google-plus href="#" 
+                  i.fa.fa-google-plus
+              /!
+                | <li><a class="he_social ico-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li
+                | <li><a class="he_social ico-dribbble" href="#"><i class="fa fa-dribbble"></i></a></li
+                | <li><a class="he_social ico-instagram" href="#"><i class="fa fa-instagram"></i></a></li
+                | <li><a class="he_social ico-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li
+                | <li><a class="he_social ico-dropbox" href="#"><i class="fa fa-dropbox"></i></a></li
+                | <li><a class="he_social ico-skype" href="#"><i class="fa fa-skype"></i></a></li
+                | <li><a class="he_social ico-youtube" href="#"><i class="fa fa-youtube"></i></a></li
+                | <li><a class="he_social ico-tumblr" href="#"><i class="fa fa-tumblr"></i></a></li
+                | <li><a class="he_social ico-vimeo" href="#"><i class="fa fa-vimeo-square"></i></a></li
+                | <li><a class="he_social ico-flickr" href="#"><i class="fa fa-flickr"></i></a></li
+                | <li><a class="he_social ico-github" href="#"><i class="fa fa-github-alt"></i></a></li
+                | <li><a class="he_social ico-renren" href="#"><i class="fa fa-renren"></i></a></li
+                | <li><a class="he_social ico-vk" href="#"><i class="fa fa-vk"></i></a></li
+                | <li><a class="he_social ico-xing" href="#"><i class="fa fa-xing"></i></a></li
+                | <li><a class="he_social ico-weibo" href="#"><i class="fa fa-weibo"></i></a></li
+                | <li><a class="he_social ico-rss" href="#"><i class="fa fa-rss"></i></a></li
+          /! End Footer Social Icons
+      /! End Header
+      .row
+        /! Intro Section Description
+        #intro_description.col-sm-7.col-md-7
+          /! Intro Section Title
+          h1
+            strong CrossWay
+            | is the Most
+            strong Simple Way
+            | to launch your
+            strong startup
+          /! Description #1
+          .intro_feature
+            h4
+              i.fa.fa-check
+              | Lorem ipsum consectetur adipisicing dolor
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+              | labore et dolore magna aliqua ullamco laboris aliquipea commodo consequat.
+          /! Description #2
+          .intro_feature
+            h4
+              i.fa.fa-check
+              | Lorem ipsum dolor amet, consectetur adipisicing
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+              | labore et dolore magna aliqua ullamco laboris aliquipea commodo consequat.
+          /! Description #3
+          .intro_feature
+            h4
+              i.fa.fa-check
+              | Lorem ipsum dolor, consectetur adipisicing
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+              | labore et dolore magna aliqua ullamco laboris aliquipea commodo consequat.
+          /! Intro Section Button
+          .intro_button.text-center
+            a.btn.btn-primary.btn-lg href="#"  Download Now
+        /! End Intro Section Description
+        /! Intro Section Form
+        #intro_form.col-sm-5.col-md-5
+          /! Register form
+          .form_register
+            h2 Register Now!
+            form.row action="contact.php" method="post" name="contactform" 
+              #input_name.col-md-12
+                input#name.form-control name="first_name" placeholder=("Full Name") type="text" /
+              #input_email.col-md-12
+                input#email.form-control name="email" placeholder=("Enter your email") type="text" /
+              #input_phone.col-md-12
+                input#phone.form-control name="phone" placeholder=("Phone Number") type="text" /
+              #input_message.col-md-12
+                textarea#comments.form-control name="message" placeholder=("Your Suggestion ...") rows="6" 
+              /! Submit Button
+              #form_register_btn.text-center
+                input#submit.btn.btn-primary.btn-lg type="submit" value="Register" /
+        /! End Intro Section Form
+      /! End row
+    /! End container
+  /! END INTRO
+  /!
+    | ABOUT-1
+    | \=============================================
+  section#about-1
+    .container
+      /! Section Title
+      .row
+        .col-md-12.titlebar
+          h1
+            | Some
+            strong words about
+            | us
+          p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
+      .row
+        /! About-1 Text
+        #about-1-text.col-md-6
+          h4 What we do?
           p
-            | You can also profiting from downward movements in coins price by selling them at a higher price and buy them again at a lower price and pocketing the price difference. If you wants to profit from short selling, you have to own Coin or USD in the first place. Buy coins from Demo Exchange with USD first.
-  .howto_inner
+            | Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni
+            | dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit,
+            | Numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.
+          /! Accordion
+          #accordion_holder
+            h4 Why choose us?
+            ul.accordion.clearfix
+              /! Text #1
+              li#text_1
+                a href="#text1"  Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                div
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    | Nostrud exercitation ullamco laboris aliquipea commodo consequat.
+              /! Text #2
+              li#text_2
+                a href="#text2"  Aenean consequat lorem ut felis ullamcorper?
+                div
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    | Ut enim ad minim veniam.
+              /! Text #3
+              li#text_3
+                a href="#text3"  Aenean rhoncus diam eleifend, pulvinar feugiat feugiat dolor?
+                div
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          /! End Accordion
+        /! End About-1 Text
+        /! About-1 Image
+        #about-1-img.col-md-6.text-center
+          img.img-responsive alt="image" src='#{image_path 'thumbs/startup-1.png'}' /
+      /! End row
+    /! End container
+  /! END ABOUT-1
+  /!
+    | ABOUT-2
+    | \=============================================
+  section#about-2
     .container
       .row
-        .col-md-8.left_no_padding.wow.fadeInLeft data-wow-duration="1s"
-          .howto_image
-            img.wow.bounceIn data-wow-duration="1s" src='#{image_path 'howto.png'}' alt=""
-        .col-md-14.right_no_padding.wow.fadeInRight data-wow-duration="1s"
-          .left_single_howto
-            h3
-              | Step 1 - Deposit USD and cryptocurrencies first
+        /! Embedded Video
+        #video_holder.col-md-6
+          h4 Discover more about us
+          p
+            | Voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit,
+            | Numquam eius modi tempora incidunt, aliquam quaerat voluptatem.
+          .video-block
+            iframe height="250" src="http://player.vimeo.com/video/69988283" width="370" 
+        /! About-2 Text
+        #about-2-text.col-md-6
+          h4 Our Philosophy
+          p
+            | Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni
+            | dolores ratione voluptatem nesciunt, neque porro quisquam dolore magnam aliquam quaerat voluptatem.
+            | Neque porro quisquam est, qui dolorem ipsum, quia dolor sit,
+            | Numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.
+          /! Quote
+          #quote_holder
+            h4 What they say about us!
+            /! Rotator Content
+            .flexslider
+              ul.slides
+                /! Testimonial #1
+                li
+                  .testimonials
+                    blockquote.quote-text
+                      a href="#"  @ Numquam eius modi tempora incidunt, labore dolore magnam aliquam quaerat voluptatem labore voluptatem.
+                    img.quote-author-avatar alt="" src='#{image_path 'thumbs/user-1.jpg'}' /
+                    p.quote-author
+                      a href="#" 
+                        strong> John Doe
+                        | @#johdoe
+                /! Testimonial #2
+                li
+                  .testimonials
+                    blockquote.quote-text
+                      a href="#"  @Nemo voluptatem, quia voluptas, aspernatur consequuntur magni dolores ratione voluptatem nesciunt.
+                    img.quote-author-avatar alt="" src='#{image_path 'thumbs/user-2.jpg'}' /
+                    p.quote-author
+                      a href="#" 
+                        strong> John Doe
+                        | @#johdoe
+                /! Testimonial #3
+                li
+                  .testimonials
+                    blockquote.quote-text
+                      a href="#"  @Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia.
+                    img.quote-author-avatar alt="" src='#{image_path 'thumbs/user-3.jpg'}' /
+                    p.quote-author
+                      a href="#" 
+                        strong> John Doe
+                        | @#johdoe
+            /! End Rotator Content
+          /! End Quote
+        /! End About-2 Text
+      /! End row
+    /! End container
+  /! END ABOUT-2
+  /!
+    | FEATURES
+    | \=============================================
+  section#features.parallax
+    .container
+      /! Section Title
+      .row
+        .col-md-12.titlebar
+          h1
+            | Our awesome
+            strong features
+          p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
+      /! Features Holder
+      .row
+        .col-md-12
+          ul
+            /! Feature Icon 1
+            li#feature_1
+              .col-sm-6.col-md-4.feature-box.clearfix
+                .feature-box-icon
+                  i.fa.fa-flask
+                .feature-box-content
+                  h4 Responsive Design
+                  p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+            /! Feature Icon 2
+            li#feature_2
+              .col-sm-6.col-md-4.feature-box.clearfix
+                .feature-box-icon
+                  i.fa.fa-globe
+                .feature-box-content
+                  h4 Web Marketing
+                  p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+            /! Feature Icon 3
+            li#feature_3
+              .col-sm-6.col-md-4.feature-box.clearfix
+                .feature-box-icon
+                  i.fa.fa-desktop
+                .feature-box-content
+                  h4 Desktop Friendly
+                  p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+            /! Feature Icon 4
+            li#feature_4
+              .col-sm-6.col-md-4.feature-box.clearfix
+                .feature-box-icon
+                  i.fa.fa-cog
+                .feature-box-content
+                  h4 Very easy to customize
+                  p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+            /! Feature Icon 5
+            li#feature_5
+              .col-sm-6.col-md-4.feature-box.clearfix
+                .feature-box-icon
+                  i.fa.fa-heart
+                .feature-box-content
+                  h4 Clients Loving
+                  p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+            /! Feature Icon 6
+            li#feature_6
+              .col-sm-6.col-md-4.feature-box.clearfix
+                .feature-box-icon
+                  i.fa.fa-clock-o
+                .feature-box-content
+                  h4 Supporting
+                  p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+        /! End col-md-12
+      /! End Features Holder
+    /! End container
+  /! END FEATURES
+  /!
+    | FAQs
+    | \=============================================
+  section#faq
+    .container
+      /! Section Title
+      .row
+        .col-md-12.titlebar
+          h1
+            | Frequently
+            strong asked questions
+          p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
+      .row
+        /! Question #1
+        #question_1.col-md-6
+          .question
+            h4 Aliquam dapibus interdum lobortis pretium ornare erat
             p
-              | Signup and activate your account to get your coin deposit address.
+              | Praesent semper, lacus sed cursus porta, odio augue feugiat eros, ac tincidunt ligula massa in est.
+              | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ut mi sit amet mauris suscipit
+              | bibendum sit amet in odio. Integer congue leo metus, eu mollis lorem viverra nec.
+        /! Question #2
+        #question_2.col-md-6
+          .question
+            h4 Aliquam dapibus lobortis pretium ornare erat
             p
-              | Once Coin sent to coin address you will see fully confirmed and available for trade. It can take around 30 minutes or more time depending on Coin network so do not worry and wait quietly.
-          .left_single_howto
-            h3
-              | Step 2 - Buy Coins from Exchange
+              | Praesent semper, lacus sed cursus porta, odio augue feugiat eros, ac tincidunt ligula massa in est.
+              | Vestibulum ante ipsum primis in faucibus bibendum sit amet in odio. Integer congue leo metus, eu mollis lorem viverra nec.
+      /! End row
+      .row
+        /! Question #3
+        #question_3.col-md-6
+          .question
+            h4 Aliquam dapibus interdum turpis, lobortis pretium
             p
-              | Once you see balance in your coin wallet visit Coin fund page.
+              | Praesent semper, lacus sed cursus porta, odio augue feugiat eros, ac tincidunt ligula massa in est.
+              | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ut mi sit amet mauris suscipit
+              | bibendum sit amet in odio.
+        /! Question #4
+        #question_4.col-md-6
+          .question
+            h4 Aliquam interdum turpis, lobortis pretium ornare erat
             p
-              | Simply Fill in buy coin form for your desired price and click "Buy Coin" Button.
-#TRADE.trades
-  .container
-    .row.wow.fadeInLeftBig data-wow-duration="1s"
-      .col-md-18
-        p
-          | Have you never done trade? Try it by pressing this button.
-      .col-md-6
-        a.btn.btn-primary.btn-action href="#{market_path(current_market)}" role="button"
-          | Trade Now
-section#CONTACT.contact.page
-  .container
-    .row
-      .col-md-20.col-md-offset-2
-        .section_title
-          h2
-            | about us
+              | Praesent semper, lacus sed cursus porta, odio augue feugiat eros. Vestibulum ante ipsum primis in faucibus orci luctus et
+              | ultrices posuere cubilia Curae; Etiam ut mi sit amet mauris suscipit bibendum sit amet in odio. Integer congue leo metus, mollis lorem viverra.
+      /! End row
+    /! End container
+  /! END FAQs
+  /!
+    | CLIENTS
+    | \=============================================
+  section#clients.parallax
+    .container
+      /! Section Title
+      #clients-titlebar.row
+        .col-sm-12
+          .titlebar
+            h1
+              | Some of
+              strong our partners
+            p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
+            /! Clients Carousel Navigation
+            .customNavigation
+              a.prev.btn.btn-primary
+                i.fa.fa-angle-left
+              a.next.btn.btn-primary
+                i.fa.fa-angle-right
+      /! End Section Title
+      /! Clients Carousel
+      #clients-holder.row
+        .col-md-12
+          /! Clients Carousel
+          #our-customers.owl-carousel
+            /! Client Logo #1
+            #client_logo_1.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-1.png'}' /
+            /! Client Logo #2
+            #client_logo_2.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-2.png'}' /
+            /! Client Logo #3
+            #client_logo_3.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-3.png'}' /
+            /! Client Logo #4
+            #client_logo_4.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-4.png'}' /
+            /! Client Logo #5
+            #client_logo_5.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-5.png'}' /
+            /! Client Logo #6
+            #client_logo_6.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-6.png'}' /
+            /! Client Logo #7
+            #client_logo_7.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-1.png'}' /
+            /! Client Logo #8
+            #client_logo_8.item
+              img.img-responsive.img-customer alt="customer_image" src='#{image_path 'thumbs/client-2.png'}' /
+          /! End Clients Carousel
+      /! End Clients Holder
+    /! End container
+  /! END CLIENTS
+  /!
+    | CALL TO ACTION
+    | \=============================================
+  section#call-to-action.parallax
+    .container
+      .row
+        /! Call To Action Content
+        .col-sm-12.text-center
+          h1
+            | The Most
+            strong Simple Way
+            | to launch your
+            strong startup
           p
-            | The Demo Team with best skills and experiences
-  .container
-    .row
-      .col-md-16.col-md-offset-4
-        .contact_screen.text-center.wow.fadeInUp data-wow-duration="1s"
-          img src='#{image_path 'footer.png'}' alt=""
-section.copyright
-  .container
-    .row
-      .col-md-6
-        .copy_right_text
-          p
-            a href="https://demo.exchange"
-              | Terms of Service
-          p
-            a href="https://demo.exchange"
-              | Privacy Policy
-          p
-            a href="https://demo.exchange"
-              | Fee Schedule
-      .col-md-12
-        .copy_right_text
-          p
-            a href="mailto:support@demo.exchange"
-              i.fa.fa-envelope
-              | &nbsp&nbsp&nbsp
-              | support@demo.exchange
-          p
-            a href="#"
-              i.fa.fa-map-marker
-              | &nbsp&nbsp&nbsp
-              | Demo Exchange
-      .col-md-6
-        .scroll_top
-          a href="#HOME"
-            i.fa.fa-angle-double-up
+            | Praesent semper, lacus sed cursus porta, odio augue feugiat primis in faucibus ultrices posuere cubilia Curae;
+            | Integer congue leo metus, mollis lorem viverra.
+          /! Call To Action Button
+          a.btn.btn-primary.btn-lg Download Now
+        /! End Call To Action Content
+      /! End row
+    /! End container
+  /! END CALL TO ACTION
+  /!
+    | FOOTER
+    | \=============================================
+  footer#footer
+    .container
+      .row
+        /! Footer Navigation Menu
+        #footer_nav.col-sm-6.col-md-4
+          ul.footer-nav.clearfix
+            li
+              a href="about.html"  About
+            li
+              a href="blog.html"  Blog
+            li
+              a href="#"  Help
+            li
+              a href="#"  Privacy
+            li
+              a href="#"  Terms
+          #footer_copy
+            p
+              | \&copy; Copyright 2014
+              span Crossway
+              | All Right Reserved
+        /! End Footer Navigation Menu
+        /! Footer Social Icons
+        #footer_icons.col-sm-6.col-md-4.text-center
+          ul.footer-socials.clearfix
+            li
+              a.foo_social.ico-facebook href="#" 
+                i.fa.fa-facebook
+            li
+              a.foo_social.ico-twitter href="#" 
+                i.fa.fa-twitter
+            li
+              a.foo_social.ico-google-plus href="#" 
+                i.fa.fa-google-plus
+            li
+              a.foo_social.ico-linkedin href="#" 
+                i.fa.fa-linkedin
+            li
+              a.foo_social.ico-dribbble href="#" 
+                i.fa.fa-dribbble
+            /!
+              | <li><a class="foo_social ico-instagram" href="#"><i class="fa fa-instagram"></i></a></li
+              | <li><a class="foo_social ico-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li
+              | <li><a class="foo_social ico-dropbox" href="#"><i class="fa fa-dropbox"></i></a></li
+              | <li><a class="foo_social ico-skype" href="#"><i class="fa fa-skype"></i></a></li
+              | <li><a class="foo_social ico-youtube" href="#"><i class="fa fa-youtube"></i></a></li
+              | <li><a class="foo_social ico-tumblr" href="#"><i class="fa fa-tumblr"></i></a></li
+              | <li><a class="foo_social ico-vimeo" href="#"><i class="fa fa-vimeo-square"></i></a></li
+              | <li><a class="foo_social ico-flickr" href="#"><i class="fa fa-flickr"></i></a></li
+              | <li><a class="foo_social ico-github" href="#"><i class="fa fa-github-alt"></i></a></li
+              | <li><a class="foo_social ico-renren" href="#"><i class="fa fa-renren"></i></a></li
+              | <li><a class="foo_social ico-vk" href="#"><i class="fa fa-vk"></i></a></li
+              | <li><a class="foo_social ico-xing" href="#"><i class="fa fa-xing"></i></a></li
+              | <li><a class="foo_social ico-weibo" href="#"><i class="fa fa-weibo"></i></a></li
+              | <li><a class="foo_social ico-rss" href="#"><i class="fa fa-rss"></i></a></li
+        /! End Footer Social Icons
+        /! Newsletter Form
+        .col-md-4
+          #newsletter_form.col-sm-12
+            .clearfix
+              form#subscribe-form.subscribe-form.pull-right action="newsletter.php" method="post" 
+                input.subscribe-input name="email" placeholder=("Enter your e-mail address...") type="email" /
+                button.subscribe-submit type="submit"  Subscribe
+            p#newsletter-paragraph.pull-right
+              | Join our newsletter subscription,
+              span be always informed
+        /! End Newsletter Form
+      /! End row
+    /! End container
+  /! END FOOTER

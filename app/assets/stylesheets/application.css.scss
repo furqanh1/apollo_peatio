@@ -2,6 +2,12 @@
 
 @import 'vars/bootstrap';
 
+@import 'flat/animate';
+@import 'flat/flexslider';
+@import 'flat/owl.carousel';
+@import 'flat/style';
+@import 'flat/responsive';
+
 @import 'bootstrap';
 @import 'bootstrap-switch.min';
 
@@ -27,6 +33,8 @@
 @import 'features/documents';
 @import 'features/simple_captcha';
 @import 'features/custom';
+
+
 
 
 /* layouts
