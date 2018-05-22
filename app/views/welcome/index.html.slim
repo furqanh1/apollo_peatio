@@ -244,16 +244,16 @@
           .form_register
             h2 Register Now!
             form.row action="contact.php" method="post" name="contactform" 
-              #input_name.col-md-12
+              #input_name.col-md-12.form-custom-input
                 input#name.form-control name="first_name" placeholder=("Full Name") type="text" /
-              #input_email.col-md-12
+              #input_email.col-md-12.form-custom-input
                 input#email.form-control name="email" placeholder=("Enter your email") type="text" /
-              #input_phone.col-md-12
+              #input_phone.col-md-12.form-custom-input
                 input#phone.form-control name="phone" placeholder=("Phone Number") type="text" /
-              #input_message.col-md-12
+              #input_message.col-md-12.form-custom-input
                 textarea#comments.form-control name="message" placeholder=("Your Suggestion ...") rows="6" 
               /! Submit Button
-              #form_register_btn.text-center
+              #form_register_btn.text-center.form-custom-input
                 input#submit.btn.btn-primary.btn-lg type="submit" value="Register" /
         /! End Intro Section Form
       /! End row
@@ -269,14 +269,14 @@
         .col-md-12.titlebar
           h1
             | Some
-            strong words about
+            strong  words about 
             | us
           p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
       .row
         /! About-1 Text
         #about-1-text.col-md-6
-          h4 What we do?
-          p
+          h4.what-heading What we do?
+          p.what-para
             | Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni
             | dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit,
             | Numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.
@@ -391,14 +391,14 @@
           p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
       /! Features Holder
       .row
-        .col-md-12
+        .col-md-12.awesome-sec
           ul
             /! Feature Icon 1
             li#feature_1
               .col-sm-6.col-md-4.feature-box.clearfix
                 .feature-box-icon
                   i.fa.fa-flask
-                .feature-box-content
+                .feature-box-content.feat1
                   h4 Responsive Design
                   p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
             /! Feature Icon 2
@@ -459,7 +459,7 @@
           p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
       .row
         /! Question #1
-        #question_1.col-md-6
+        #question_1.col-md-6.freq-ques
           .question
             h4 Aliquam dapibus interdum lobortis pretium ornare erat
             p
@@ -467,7 +467,7 @@
               | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ut mi sit amet mauris suscipit
               | bibendum sit amet in odio. Integer congue leo metus, eu mollis lorem viverra nec.
         /! Question #2
-        #question_2.col-md-6
+        #question_2.col-md-6.freq-ques
           .question
             h4 Aliquam dapibus lobortis pretium ornare erat
             p
@@ -476,7 +476,7 @@
       /! End row
       .row
         /! Question #3
-        #question_3.col-md-6
+        #question_3.col-md-6.freq-ques
           .question
             h4 Aliquam dapibus interdum turpis, lobortis pretium
             p
@@ -484,7 +484,7 @@
               | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam ut mi sit amet mauris suscipit
               | bibendum sit amet in odio.
         /! Question #4
-        #question_4.col-md-6
+        #question_4.col-md-6.freq-ques
           .question
             h4 Aliquam interdum turpis, lobortis pretium ornare erat
             p
@@ -500,22 +500,22 @@
     .container
       /! Section Title
       #clients-titlebar.row
-        .col-sm-12
-          .titlebar
+        .col-sm-12.partner-sec-main
+          .titlebar.partner-sec
             h1
               | Some of
               strong our partners
             p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
             /! Clients Carousel Navigation
             .customNavigation
-              a.prev.btn.btn-primary
+              a.prev.btn.btn-primary.btn-partner
                 i.fa.fa-angle-left
               a.next.btn.btn-primary
                 i.fa.fa-angle-right
       /! End Section Title
       /! Clients Carousel
       #clients-holder.row
-        .col-md-12
+        .col-md-12.main-owl
           /! Clients Carousel
           #our-customers.owl-carousel
             /! Client Logo #1
@@ -553,7 +553,7 @@
     .container
       .row
         /! Call To Action Content
-        .col-sm-12.text-center
+        .col-sm-12.text-center.action-content
           h1
             | The Most
             strong Simple Way
@@ -575,7 +575,7 @@
     .container
       .row
         /! Footer Navigation Menu
-        #footer_nav.col-sm-6.col-md-4
+        #footer_nav.col-sm-6.col-md-4.footer-custom
           ul.footer-nav.clearfix
             li
               a href="about.html"  About
@@ -587,14 +587,14 @@
               a href="#"  Privacy
             li
               a href="#"  Terms
-          #footer_copy
-            p
-              | \&copy; Copyright 2014
-              span Crossway
-              | All Right Reserved
+          / #footer_copy
+          /   p
+          /     | &copy; Copyright 2017
+          /     span Demo Exchange
+          /     | All Right Reserved
         /! End Footer Navigation Menu
         /! Footer Social Icons
-        #footer_icons.col-sm-6.col-md-4.text-center
+        #footer_icons.col-sm-6.col-md-4.text-center.footer-custom
           ul.footer-socials.clearfix
             li
               a.foo_social.ico-facebook href="#" 
@@ -628,8 +628,8 @@
               | <li><a class="foo_social ico-rss" href="#"><i class="fa fa-rss"></i></a></li
         /! End Footer Social Icons
         /! Newsletter Form
-        .col-md-4
-          #newsletter_form.col-sm-12
+        .col-md-4.footer-custom
+          #newsletter_form.col-sm-12.newsltr-custom
             .clearfix
               form#subscribe-form.subscribe-form.pull-right action="newsletter.php" method="post" 
                 input.subscribe-input name="email" placeholder=("Enter your e-mail address...") type="email" /

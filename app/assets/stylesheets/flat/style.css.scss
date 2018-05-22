@@ -148,6 +148,8 @@ ul {
 }
 
 .titlebar p {
+	width: 1140px;
+	height: 25px;
 	color: #666;
 	font-size: 18px;
 	font-family: 'Lato', sans-serif;
@@ -243,6 +245,11 @@ ul {
 /*	  Intro Section Description
 /*------------------------------------------*/
 
+#intro_description {
+	height: 482px;
+  width: 682.5px;
+}
+
 #intro_description h1 {
 	font-size: 40px;
 	margin-bottom: 30px;
@@ -284,7 +291,10 @@ ul {
 }
 
 .form_register {
-	width: 100%;
+
+	// width: 100%;
+	width: 372.5px;
+  height: 498px;
 	background: rgba(120, 120, 120, 0.45);
 	margin: 0 auto;
     padding: 20px 20px 25px;
@@ -937,7 +947,7 @@ nav a#pull {
 #form_response .img-responsive { display: inline-block; }
 
 #form_response h1 {
-	font-size: 40px; 
+	font-size: 40px;
 	font-weight: 700;
 	margin-top: 10px;
 }
@@ -947,4 +957,93 @@ nav a#pull {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	margin-bottom: 20px;
+}
+
+.form-custom-input {
+	width: 100% !important;
+}
+
+.what-heading{
+	width: 535px;
+  height: 19px;
+}
+
+.what-para{
+	width: 535px;
+  height: 80px;
+}
+
+#about-1-img{
+	width: 560px;
+	height: 454.08px;
+}
+
+#about-1-text{
+	width: 575px;
+  height: 384px;
+}
+
+#social_icons{
+	width: 560px;
+  height: 41px;
+}
+
+#logo_image{
+	width: 575px;
+  height: 48px;
+}
+
+#video_holder{
+	width: 575px;
+	height: 420px;
+}
+
+#about-2-text{
+	width: 575px;
+	height: 415px;
+}
+
+.awesome-sec{
+	width: 1150px !important;
+}
+
+.feature-box {
+	width: 375px !important;
+	height: 99px !important;
+}
+
+.freq-ques{
+	width: 575px !important;
+}
+
+.partner-sec-main{
+	width: 1150px !important;
+}
+.partner-sec{
+	width: 1130px !important;
+}
+
+.main-owl{
+	width: 1150px !important;
+}
+
+.btn-partner{
+	margin-right: 5px !important;
+}
+
+.action-content{
+	width: 1150px !important;
+}
+
+.footer-custom{
+	width: 375px !important;
+}
+
+.newsltr-custom{
+	width: 345px !important;
+}
+
+#newsletter-paragraph{
+	width: 330px;
+	font-size: 13px !important;
 }
