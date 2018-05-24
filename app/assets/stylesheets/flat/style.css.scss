@@ -53,7 +53,7 @@ Tags: responsive, html5 template, one page, landing, startup, business, company,
 	margin:-100px 0 0 -100px;
 	width:200px;
 	height:200px;
-	background-image:url(icons/loader.gif);
+	background-image:image-url("icons/loader.gif");
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:75px 75px;
@@ -70,7 +70,7 @@ Tags: responsive, html5 template, one page, landing, startup, business, company,
 }
 
 #intro { 
-	background-image: url(parallax_bg/intro_bkg.jpg); 
+	background-image: image-url("parallax_bg/intro_bkg.jpg"); 
 }
 
 .parallax {
@@ -81,11 +81,11 @@ Tags: responsive, html5 template, one page, landing, startup, business, company,
 }
 
 #features { 
-	background-image: url(parallax_bg/features_bkg.jpg);  
+	background-image: image-url("parallax_bg/features_bkg.jpg");  
 }
 
 #call-to-action { 
-	background-image: url(parallax_bg/call_to_action_bkg.jpg); 
+	background-image: image-url("parallax_bg/call_to_action_bkg.jpg"); 
 }
 
 /*------------------------------------------*/
@@ -914,7 +914,7 @@ textarea {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
-	background-image: url(icons/back-to-top.png);
+	background-image: image-url("icons/back-to-top.png");
 	background-repeat: no-repeat;
 	background-position: 50% 48%;
 	background-color:rgba(123, 123, 123, 0.65);	
