@@ -418,11 +418,11 @@ textarea {
 	text-decoration: none; 
 	display: block; 
 	cursor: pointer; 
-	background: rgba(170, 170, 170, 0.15) url(icons/open.png) no-repeat center right;
+	background: rgba(170, 170, 170, 0.15) image-url("icons/open.png") no-repeat center right;
 }
 
 .accordion li.active>a { 
-	background: rgba(170, 170, 170, 0.15) url(icons/close.png) no-repeat center right;  
+	background: rgba(170, 170, 170, 0.15) image-url("icons/close.png") no-repeat center right;  
 	color: #151515;
 	box-shadow: none;
 }
